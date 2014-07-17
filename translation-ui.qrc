@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/translation">
+        <file>android-reversi-ui_de.qm</file>
+        <file>android-reversi-ui_en.qm</file>
+    </qresource>
+</RCC>
