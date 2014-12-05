@@ -22,17 +22,30 @@ SOURCES += src/main.cpp \
     src/player/staticruleaiplayer.cpp \
     src/player/treeaiplayer.cpp \
     src/player/tutorialplayer.cpp \
-    src/rules/cornerrule.cpp \
-    src/rules/endgamerule.cpp \
-    src/rules/fewerfrontierdiscsrule.cpp \
-    src/rules/greedyrule.cpp \
-    src/rules/maximiseownmovementrule.cpp \
-    src/rules/minimiseopponentmovementrule.cpp \
-    src/rules/openingrule.cpp \
-    src/rules/rule.cpp \
     src/ui/uiconnection.cpp \
     src/player/adaptivetreeaiplayer.cpp \
-    src/player/controlaiplayer.cpp
+    src/player/controlaiplayer.cpp \
+    src/player/assemblyaiplayer.cpp \
+    src/player/rules/cornerrule.cpp \
+    src/player/rules/endgamerule.cpp \
+    src/player/rules/fewerfrontierdiscsrule.cpp \
+    src/player/rules/greedyrule.cpp \
+    src/player/rules/maximiseownmovementrule.cpp \
+    src/player/rules/minimiseopponentmovementrule.cpp \
+    src/player/rules/openingrule.cpp \
+    src/player/rules/rule.cpp \
+    src/player/rules/rulehelper.cpp \
+    src/player/AssemblyAIPlayer/assemblyaihelper.cpp \
+    src/player/AssemblyAIPlayer/centercore.cpp \
+    src/player/AssemblyAIPlayer/core.cpp \
+    src/player/AssemblyAIPlayer/cornercore.cpp \
+    src/player/AssemblyAIPlayer/edgecore.cpp \
+    src/player/AssemblyAIPlayer/freemovecore.cpp \
+    src/player/AssemblyAIPlayer/frontierdiscscore.cpp \
+    src/player/AssemblyAIPlayer/greedycore.cpp \
+    src/player/AssemblyAIPlayer/insanecore.cpp \
+    src/player/AssemblyAIPlayer/movementcore.cpp \
+    src/player/AssemblyAIPlayer/areacontrolcore.cpp
 
 # Installation path
 # target.path =
@@ -52,17 +65,30 @@ HEADERS += \
     src/player/staticruleaiplayer.h \
     src/player/treeaiplayer.h \
     src/player/tutorialplayer.h \
-    src/rules/cornerrule.h \
-    src/rules/endgamerule.h \
-    src/rules/fewerfrontierdiscsrule.h \
-    src/rules/greedyrule.h \
-    src/rules/maximiseownmovementrule.h \
-    src/rules/minimiseopponentmovementrule.h \
-    src/rules/openingrule.h \
-    src/rules/rule.h \
     src/ui/uiconnection.h \
     src/player/adaptivetreeaiplayer.h \
-    src/player/controlaiplayer.h
+    src/player/controlaiplayer.h \
+    src/player/assemblyaiplayer.h \
+    src/player/rules/cornerrule.h \
+    src/player/rules/endgamerule.h \
+    src/player/rules/fewerfrontierdiscsrule.h \
+    src/player/rules/greedyrule.h \
+    src/player/rules/maximiseownmovementrule.h \
+    src/player/rules/minimiseopponentmovementrule.h \
+    src/player/rules/openingrule.h \
+    src/player/rules/rule.h \
+    src/player/rules/rulehelper.h \
+    src/player/AssemblyAIPlayer/areacontrolcore.h \
+    src/player/AssemblyAIPlayer/assemblyaihelper.h \
+    src/player/AssemblyAIPlayer/centercore.h \
+    src/player/AssemblyAIPlayer/core.h \
+    src/player/AssemblyAIPlayer/cornercore.h \
+    src/player/AssemblyAIPlayer/edgecore.h \
+    src/player/AssemblyAIPlayer/freemovecore.h \
+    src/player/AssemblyAIPlayer/frontierdiscscore.h \
+    src/player/AssemblyAIPlayer/greedycore.h \
+    src/player/AssemblyAIPlayer/insanecore.h \
+    src/player/AssemblyAIPlayer/movementcore.h
 
 OTHER_FILES += \
     src/translation/reversi-core_de.ts \

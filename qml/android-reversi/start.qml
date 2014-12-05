@@ -156,6 +156,7 @@ Item {
                             ListElement { name: "Static Rule AI"}
                             ListElement { name: "Adaptive Tree AI"}
                             ListElement { name: "Control AI"}
+                            ListElement { name: "Assembly AI"}
                         }
 
                         delegate: Text { width: parent.width; color: "white"; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
@@ -204,6 +205,7 @@ Item {
                             ListElement { name: "Static Rule AI"}
                             ListElement { name: "Adaptive Tree AI"}
                             ListElement { name: "Control AI"}
+                            ListElement { name: "Assembly AI"}
                         }
 
                         delegate: Text { width: parent.width; color: "white"; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
