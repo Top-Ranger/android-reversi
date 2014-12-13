@@ -4,6 +4,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68.8pt" height="68.8pt">
 <defs/>
 <g id="Layer_2"/><g id="Layer_1">
-  <ellipse id="shape1" transform="matrix(0.99992 0.0125877 -0.0133496 0.99991 1.43918 0.210269)" rx="33.76008900755pt" ry="33.76780828169pt" cx="33.76008900755pt" cy="33.76780828169pt" fill="#8f8f8f" fill-rule="evenodd" stroke="#8f8f8f" stroke-width="7.08662645000" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="1.98425540600"/>
+  <ellipse id="shape1" transform="matrix(0.99992 0.0125877 -0.0133496 0.99991 1.43918 0.210269)" rx="33.76008900755pt" ry="33.76780828169pt" cx="33.76008900755pt" cy="33.76780828169pt" fill="#d3d3d3" fill-rule="evenodd" stroke="#d3d3d3" stroke-width="7.08662645000" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="1.98425540600"/>
  </g>
 </svg>
