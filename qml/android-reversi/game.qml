@@ -874,8 +874,7 @@ Item {
                 text: qsTr("Restart game")
                 onClicked: {
                     gamemaster.initialise(list1.currentItem.text, list2.currentItem.text, 0)
-                    pageStack.pop()
-                    pageStack.push(Qt.resolvedUrl("game.qml"))
+                    pageStack.push({item: Qt.resolvedUrl("game.qml"), replace:true})
                 }
             }
         }
