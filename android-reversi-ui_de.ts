@@ -119,7 +119,7 @@ Das Spiel endet, wenn kein Spieler mehr einen Stein plazieren kann (es können n
 <context>
     <name>start</name>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="195"/>
+        <location filename="qml/android-reversi/start.qml" line="193"/>
         <source>Start game</source>
         <translation>Starte das Spiel</translation>
     </message>

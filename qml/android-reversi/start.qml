@@ -192,7 +192,9 @@ Item {
                 width: parent.width
                 text: qsTr("Start game")
                 onClicked: {
-                    gamemaster.initialise(list1.currentItem.text, list2.currentItem.text, 0)
+                    variable.player1 = list1.currentItem.text
+                    variable.player2 = list2.currentItem.text
+                    gamemaster.initialise(variable.player1, variable.player2, 0)
                     pageStack.push(Qt.resolvedUrl("game.qml"))
                 }
             }

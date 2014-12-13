@@ -873,7 +873,7 @@ Item {
                 visible: variableBoard.gamefinished
                 text: qsTr("Restart game")
                 onClicked: {
-                    gamemaster.initialise(list1.currentItem.text, list2.currentItem.text, 0)
+                    gamemaster.initialise(variable.player1, variable.player2, 0)
                     pageStack.push({item: Qt.resolvedUrl("game.qml"), replace:true})
                 }
             }

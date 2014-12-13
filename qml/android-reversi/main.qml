@@ -43,6 +43,8 @@ ApplicationWindow {
         property int heightText: (Screen.height / 20) * 2 / 3
         property int list1save: 0
         property int list2save: 0
+        property string player1: "Human"
+        property string player2: "Human"
     }
 
     Item {
