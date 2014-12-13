@@ -32,14 +32,14 @@ import QtQuick.Window 2.1
 import QtQuick.Controls 1.3
 
 Item {
-    width: Screen.width
-    height: Screen.height
+    width: parent.width
+    height: parent.height
 
     Flickable {
-        width: Screen.width
-        height: Screen.height
+        width: parent.width
+        height: parent.height
 
-        contentHeight: start.height + buttonColumn.height
+        contentHeight: start.height
         contentWidth: Screen.width
         flickableDirection: Flickable.VerticalFlick
         clip: true
@@ -181,12 +181,6 @@ Item {
                     }
                 }
             }
-        }
-
-        Column {
-            id: buttonColumn
-            width: parent.width
-            anchors.top: parent.bottom
 
             Button {
                 width: parent.width

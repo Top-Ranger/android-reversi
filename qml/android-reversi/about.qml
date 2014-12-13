@@ -31,14 +31,14 @@ import QtQuick 2.0
 import QtQuick.Window 2.1
 
 Item {
-    width: Screen.width
-    height: Screen.height
+    width: parent.width
+    height: parent.height
 
     Flickable {
         id: aboutFlickable
 
-        width: Screen.width
-        height: Screen.height
+        width: parent.width
+        height: parent.height
         interactive: true
         clip: true
 

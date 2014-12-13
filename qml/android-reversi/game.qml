@@ -32,13 +32,13 @@ import QtQuick.Window 2.1
 import QtQuick.Controls 1.3
 
 Item {
-    width: Screen.width
-    height: Screen.height
+    width: parent.width
+    height: parent.height
 
     Flickable {
 
-        height: Screen.height
-        width: Screen.width
+        height: parent.height
+        width: parent.width
         Component.onCompleted: functions.startGame()
         boundsBehavior: Flickable.StopAtBounds
         clip: true
