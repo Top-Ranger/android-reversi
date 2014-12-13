@@ -75,8 +75,8 @@ ApplicationWindow {
         Menu {
             id: helpMenu
             title: qsTr("Help")
-            MenuItem { text: qsTr("Rules"); onTriggered: console.log(menu.root.contentHeight)}
-            MenuItem { text: qsTr("About"); onTriggered: pageStack.push(Qt.resolvedUrl("about.qml"))}
+            MenuItem { text: qsTr("Rules"); onTriggered: pageStack.push(Qt.resolvedUrl("rules.qml")) }
+            MenuItem { text: qsTr("About"); onTriggered: pageStack.push(Qt.resolvedUrl("about.qml")) }
         }
 
     }
