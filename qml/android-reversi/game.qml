@@ -29,14 +29,15 @@
 
 import QtQuick 2.0
 import QtQuick.Window 2.1
+import QtQuick.Controls 1.3
 
 Item {
     width: Screen.width
-    height: Screen.height - variable.heightButton
+    height: Screen.height
 
     Flickable {
 
-        height: Screen.height - variable.heightButton
+        height: Screen.height
         width: Screen.width
         Component.onCompleted: functions.startGame()
         boundsBehavior: Flickable.StopAtBounds
@@ -322,7 +323,6 @@ Item {
                     text: variableBoard.input
                     font.pixelSize: variable.heightText
                     wrapMode: Text.Wrap
-                    color: "white"
                 }
             }
 
@@ -866,7 +866,17 @@ Item {
                 text: variableBoard.message
                 font.pixelSize: variable.heightText
                 wrapMode: Text.Wrap
-                color: "white"
+            }
+
+            Button {
+                width: parent.width
+                visible: variableBoard.gamefinished
+                text: qsTr("Restart game")
+                onClicked: {
+                    gamemaster.initialise(list1.currentItem.text, list2.currentItem.text, 0)
+                    pageStack.pop()
+                    pageStack.push(Qt.resolvedUrl("game.qml"))
+                }
             }
         }
     }

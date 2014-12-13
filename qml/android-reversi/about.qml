@@ -32,13 +32,13 @@ import QtQuick.Window 2.1
 
 Item {
     width: Screen.width
-    height: Screen.height - variable.heightButton
+    height: Screen.height
 
     Flickable {
         id: aboutFlickable
 
         width: Screen.width
-        height: Screen.height - variable.heightButton
+        height: Screen.height
         interactive: true
         clip: true
 
@@ -54,14 +54,13 @@ Item {
                 width: parent.width
                 font.pixelSize: variable.heightText
                 font.bold: true
-                color: "white"
                 text: "Reversi Version dev-20141205"
             }
 
             Text {
                 width: parent.width
                 font.pixelSize: variable.heightText / 2
-                color: "lightgrey"
+                color: "grey"
                 wrapMode: Text.Wrap
 
                 text: "  Copyright (C) 2014 Marcus Soll
@@ -79,14 +78,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
             }
 
             Text {
-                color: "white"
                 font.pixelSize: variable.heightText
                 font.underline: true
                 text: qsTr("Translation")
             }
 
             Text {
-                color: "white"
                 font.pixelSize: variable.heightText
                 text: "de"
             }
@@ -94,11 +91,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
             Text {
                 text: "Marcus Soll"
                 font.pixelSize: variable.heightText
-                color: "lightgrey"
+                color: "grey"
             }
 
             Text {
-                color: "white"
                 font.pixelSize: variable.heightText
                 text: "en"
             }
@@ -106,27 +102,26 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
             Text {
                 text: "Marcus Soll"
                 font.pixelSize: variable.heightText
-                color: "lightgrey"
+                color: "grey"
             }
 
             Text {
                 text: "Johannes Preuß"
                 font.pixelSize: variable.heightText
-                color: "lightgrey"
+                color: "grey"
             }
 
 
             Text {
                 width: parent.width
                 font.pixelSize: variable.heightText / 2
-                color: "lightgrey"
+                color: "grey"
                 wrapMode: Text.Wrap
 
                 text: "\n\n"
             }
 
             Text {
-                color: "white"
                 font.pixelSize: variable.heightText
                 font.underline: true
                 text: qsTr("About Qt")
@@ -135,7 +130,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
             Text {
                 width: parent.width
                 font.pixelSize: variable.heightText / 2
-                color: "lightgrey"
+                color: "grey"
                 wrapMode: Text.Wrap
 
                 text: "Qt is a C++ toolkit for cross-platform application development.

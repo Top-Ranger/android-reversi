@@ -32,11 +32,11 @@ import QtQuick.Window 2.1
 
 Item {
     width: Screen.width
-    height: Screen.height - variable.heightButton
+    height: Screen.height
 
     Flickable {
         width: Screen.width
-        height: Screen.height - variable.heightButton
+        height: Screen.height
 
         contentHeight: rules.height
         contentWidth: Screen.width
@@ -51,7 +51,6 @@ Item {
 
             Text {
                 font.pixelSize: variable.heightText
-                color: "white"
                 text: qsTr("Rules")
                 font.bold: true
                 font.underline: true
@@ -59,7 +58,6 @@ Item {
 
             Text  {
                 font.pixelSize: variable.heightText
-                color: "white"
                 width: rules.width
                 wrapMode: Text.Wrap
 
@@ -72,7 +70,7 @@ The game ends when both players are unable to capture. (However, there can still
 
             Text  {
                 font.pixelSize: variable.heightText
-                color: "lightgrey"
+                color: "grey"
                 width: rules.width
                 wrapMode: Text.Wrap
 

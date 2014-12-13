@@ -29,18 +29,18 @@
 
 import QtQuick 2.0
 import QtQuick.Window 2.1
+import QtQuick.Controls 1.3
 
-Rectangle {
-    id: main
+ApplicationWindow {
+    id: window
+
     width: Screen.width
     height: Screen.height
-    color: "darkgreen"
 
     Item {
         id: variable
 
-        property int heightButton: Screen.height / 20
-        property int heightText: heightButton * 2 / 3
+        property int heightText: (Screen.height / 20) * 2 / 3
         property bool setQuit: true
         property bool loaderStart: true
         property int list1save: 0
@@ -49,77 +49,49 @@ Rectangle {
 
     Item {
         focus: true
-
         Keys.onReleased: {
+            console.log(55)
             if(event.key === Qt.Key_Back)
             {
-                if(variable.setQuit)
+                console.log(780)
+                if(pageStack.depth === 1)
                 {
                     event.accepted = true
-                    Qt.quit()
+                    console.log(1)
+                    Qt.exit()
                 }
                 else
                 {
-                    loader.setSource("start.qml")
-                    variable.setQuit = true
+                    console.log(1)
+                    pageStack.pop()
                     event.accepted = true
                 }
             }
         }
     }
 
-    Column {
-
-        Rectangle {
-            width: Screen.width
-            height: variable.heightButton
-            color: "black"
-
-            Text {
-                height: parent.height
-                text: variable.setQuit ? qsTr("Quit") : qsTr("Back")
-                color: "white"
-                font.pixelSize: variable.heightText
-                anchors.centerIn: parent
-            }
-
-            MouseArea {
-                height: parent.height
-                width: parent.width
-                onClicked: {
-                    if(variable.setQuit)
-                    {
-                        Qt.quit()
-                    }
-                    else
-                    {
-                        loader.setSource("start.qml")
-                        variable.setQuit = true
-                    }
-                }
-            }
+     menuBar: MenuBar {
+        id: menu
+        Menu {
+            title: qsTr("Actions")
+            MenuItem { text: qsTr("Back"); visible: pageStack.depth > 1; onTriggered: pageStack.pop() }
+            MenuItem { text: qsTr("Close"); onTriggered: Qt.exit() }
         }
 
-        Loader {
-            id: loader
-            visible: true
-            height: parent.height - variable.heightButton
-            width: parent.width
-            x: 0
-            y: variable.heightButton
-
-            source: "start.qml"
-
-            onSourceChanged: {
-                if(!variable.loaderStart)
-                {
-                    variable.setQuit = false
-                }
-                else
-                {
-                    variable.loaderStart = false
-                }
-            }
+        Menu {
+            id: helpMenu
+            title: qsTr("Help")
+            MenuItem { text: qsTr("Rules"); onTriggered: pageStack.push(Qt.resolvedUrl("rules.qml"))}
+            MenuItem { text: qsTr("About"); onTriggered: pageStack.push(Qt.resolvedUrl("about.qml"))}
         }
+
+    }
+
+    StackView {
+        width: parent.width
+        height: parent.height - menu.height
+        id: pageStack
+        initialItem: Qt.resolvedUrl('start.qml')
     }
 }
+

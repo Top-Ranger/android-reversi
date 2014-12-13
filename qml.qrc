@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/android-reversi/0.png</file>
+        <file>qml/android-reversi/0changed.png</file>
+        <file>qml/android-reversi/1.png</file>
+        <file>qml/android-reversi/1changed.png</file>
+        <file>qml/android-reversi/2.png</file>
+        <file>qml/android-reversi/2changed.png</file>
+        <file>qml/android-reversi/about.qml</file>
+        <file>qml/android-reversi/clicked0.png</file>
+        <file>qml/android-reversi/clicked0changed.png</file>
+        <file>qml/android-reversi/clicked1.png</file>
+        <file>qml/android-reversi/clicked1changed.png</file>
+        <file>qml/android-reversi/clicked2.png</file>
+        <file>qml/android-reversi/clicked2changed.png</file>
+        <file>qml/android-reversi/game.qml</file>
+        <file>qml/android-reversi/main.qml</file>
+        <file>qml/android-reversi/rules.qml</file>
+        <file>qml/android-reversi/start.qml</file>
+    </qresource>
+</RCC>

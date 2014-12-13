@@ -115,7 +115,8 @@ OTHER_FILES += \
 
 RESOURCES += \
     src/translation/core-translation.qrc \
-    translation-ui.qrc
+    translation-ui.qrc \
+    qml.qrc
 
 SUBDIRS += \
     android-reversi-ui.pro \

@@ -29,16 +29,17 @@
 
 import QtQuick 2.0
 import QtQuick.Window 2.1
+import QtQuick.Controls 1.3
 
 Item {
     width: Screen.width
-    height: Screen.height - variable.heightButton
+    height: Screen.height
 
     Flickable {
         width: Screen.width
-        height: Screen.height - variable.heightButton
+        height: Screen.height
 
-        contentHeight: start.height
+        contentHeight: start.height + buttonColumn.height
         contentWidth: Screen.width
         flickableDirection: Flickable.VerticalFlick
         clip: true
@@ -48,73 +49,6 @@ Item {
         Column {
             width: parent.width
             id: start
-
-            Rectangle {
-                width: Screen.width
-                height: variable.heightButton
-                color: "grey"
-
-                Text {
-                    height: parent.height
-                    text: qsTr("About")
-                    color: "white"
-                    font.pixelSize: variable.heightText
-                    anchors.centerIn: parent
-                }
-
-                MouseArea {
-                    height: parent.height
-                    width: parent.width
-                    onClicked: {
-                        loader.setSource("about.qml")
-                    }
-                }
-            }
-
-            Rectangle {
-                width: Screen.width
-                height: variable.heightButton
-                color: "grey"
-
-                Text {
-                    height: parent.height
-                    text: qsTr("Rules")
-                    color: "white"
-                    font.pixelSize: variable.heightText
-                    anchors.centerIn: parent
-                }
-
-                MouseArea {
-                    height: parent.height
-                    width: parent.width
-                    onClicked: {
-                        loader.setSource("rules.qml")
-                    }
-                }
-            }
-
-            Rectangle {
-                width: Screen.width
-                height: variable.heightText
-                color: "grey"
-
-                Text {
-                    height: parent.height
-                    text: qsTr("Start game")
-                    color: "white"
-                    font.pixelSize: variable.heightText
-                    anchors.centerIn: parent
-                }
-
-                MouseArea {
-                    height: parent.height
-                    width: parent.width
-                    onClicked: {
-                        gamemaster.initialise(list1.currentItem.text ,list2.currentItem.text ,0)
-                        loader.setSource("game.qml")
-                    }
-                }
-            }
 
             Row {
                 width: Screen.width / 3 * 2
@@ -134,7 +68,6 @@ Item {
                             font.underline: true
                             font.bold: true
                             text: qsTr("Player 1:")
-                            color: "white"
                         }
                     }
 
@@ -159,11 +92,11 @@ Item {
                             ListElement { name: "Assembly AI"}
                         }
 
-                        delegate: Text { width: parent.width; color: "white"; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
+                        delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
                             MouseArea { width: parent.width; height: parent.height; onClicked: variable.list1save = index}
                         }
 
-                        highlight: Rectangle { color: "lightgreen"; radius: 5}
+                        highlight: Rectangle { color: "lightgray"; radius: 5}
                     }
                 }
 
@@ -183,7 +116,6 @@ Item {
                             font.underline: true
                             font.bold: true
                             text: qsTr("Player 2:")
-                            color: "white"
                         }
                     }
 
@@ -208,11 +140,11 @@ Item {
                             ListElement { name: "Assembly AI"}
                         }
 
-                        delegate: Text { width: parent.width; color: "white"; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
+                        delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
                             MouseArea { width: parent.width; height: parent.height; onClicked: variable.list2save = index}
                         }
 
-                        highlight: Rectangle { color: "lightgreen"; radius: 5}
+                        highlight: Rectangle { color: "lightgray"; radius: 5}
                     }
                 }
             }
@@ -225,7 +157,6 @@ Item {
                 x: Screen.width / 2 - (width / 2)
                 wrapMode: Text.Wrap
                 text: qsTr("Language:")
-                color: "white"
             }
 
             ListView {
@@ -242,16 +173,31 @@ Item {
                     ListElement { name: "en" }
                 }
 
-                delegate: Text { width: parent.width; color: "white"; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
+                delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
                     MouseArea { width: parent.width; height: parent.height; onClicked: {
                             uiconnection.changeLanguage(text)
-                            loader.setSource("start.qml")
+                            pageStack.pop()
+                            pageStack.push(Qt.resolvedUrl("start.qml"))
                             variable.setQuit = true
                         }
                     }
                 }
             }
         }
+
+        Column {
+            id: buttonColumn
+            width: parent.width
+            anchors.top: parent.bottom
+
+            Button {
+                width: parent.width
+                text: qsTr("Start game")
+                onClicked: {
+                    gamemaster.initialise(list1.currentItem.text, list2.currentItem.text, 0)
+                    pageStack.push(Qt.resolvedUrl("game.qml"))
+                }
+            }
+        }
     }
 }
-

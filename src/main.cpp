@@ -29,16 +29,16 @@
 
 #include <QtGui/QGuiApplication>
 #include <QtQuick>
-#include "qtquick2applicationviewer.h"
 #include "ui/uiconnection.h"
 #include "core/gamemaster.h"
 #include <QTranslator>
+#include <QQmlApplicationEngine>
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    QtQuick2ApplicationViewer viewer;
+    QQmlApplicationEngine viewer(QUrl("qrc:///qml/android-reversi/main.qml"));
 
     QTranslator *translator = new QTranslator();
     QTranslator *coreTranslator = new QTranslator();
@@ -57,8 +57,8 @@ int main(int argc, char *argv[])
 
     viewer.rootContext()->setContextProperty("uiconnection", &connection);
 
-    viewer.setMainQmlFile(QStringLiteral("qml/android-reversi/main.qml"));
-    viewer.showFullScreen();
+    QQuickWindow *window = qobject_cast<QQuickWindow *>(viewer.rootObjects().first());
+    window->showFullScreen();
 
     return app.exec();
 }
