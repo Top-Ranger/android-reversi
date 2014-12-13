@@ -54,7 +54,7 @@ Item {
                 width: parent.width
                 font.pixelSize: variable.heightText
                 font.bold: true
-                text: "Reversi Version dev-20141205"
+                text: "Reversi Version 1.4"
             }
 
             Text {

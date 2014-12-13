@@ -41,8 +41,6 @@ ApplicationWindow {
         id: variable
 
         property int heightText: (Screen.height / 20) * 2 / 3
-        property bool setQuit: true
-        property bool loaderStart: true
         property int list1save: 0
         property int list2save: 0
     }
@@ -50,32 +48,26 @@ ApplicationWindow {
     Item {
         focus: true
         Keys.onReleased: {
-            console.log(55)
             if(event.key === Qt.Key_Back)
             {
-                console.log(780)
-                if(pageStack.depth === 1)
+                if(pageStack.depth > 1)
                 {
-                    event.accepted = true
-                    console.log(1)
-                    Qt.exit()
-                }
-                else
-                {
-                    console.log(1)
                     pageStack.pop()
-                    event.accepted = true
+
                 }
+
+                event.accepted = true
             }
         }
     }
 
-     menuBar: MenuBar {
+    menuBar: MenuBar {
         id: menu
+
         Menu {
+            visible: pageStack.depth > 1
             title: qsTr("Actions")
             MenuItem { text: qsTr("Back"); visible: pageStack.depth > 1; onTriggered: pageStack.pop() }
-            MenuItem { text: qsTr("Close"); onTriggered: Qt.exit() }
         }
 
         Menu {

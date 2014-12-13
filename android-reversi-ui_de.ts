@@ -4,12 +4,12 @@
 <context>
     <name>about</name>
     <message>
-        <location filename="qml/android-reversi/about.qml" line="74"/>
+        <location filename="qml/android-reversi/about.qml" line="72"/>
         <source>Translation</source>
         <translation>Übersetzung</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/about.qml" line="121"/>
+        <location filename="qml/android-reversi/about.qml" line="116"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -17,28 +17,28 @@
 <context>
     <name>game</name>
     <message>
-        <location filename="qml/android-reversi/game.qml" line="76"/>
-        <location filename="qml/android-reversi/game.qml" line="197"/>
+        <location filename="qml/android-reversi/game.qml" line="77"/>
+        <location filename="qml/android-reversi/game.qml" line="198"/>
         <source>Waiting...</source>
         <translation>Bitte warten</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/game.qml" line="173"/>
+        <location filename="qml/android-reversi/game.qml" line="174"/>
         <source>Player </source>
         <translation>Spieler </translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/game.qml" line="173"/>
+        <location filename="qml/android-reversi/game.qml" line="174"/>
         <source> do your turn</source>
         <translation> am Zug</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/game.qml" line="180"/>
+        <location filename="qml/android-reversi/game.qml" line="181"/>
         <source>Finished!</source>
         <translation>Spiel beendet</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/game.qml" line="181"/>
+        <location filename="qml/android-reversi/game.qml" line="182"/>
         <source>END OF GAME!
 Points Player 1: </source>
         <oldsource>END OF GAME!
@@ -47,38 +47,58 @@ Points Player1: </oldsource>
 Punkte Spieler 1: </translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/game.qml" line="181"/>
+        <location filename="qml/android-reversi/game.qml" line="182"/>
         <source>Points Player 2: </source>
         <translation>Punkte Spieler 2: </translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/game.qml" line="303"/>
+        <location filename="qml/android-reversi/game.qml" line="304"/>
         <source>Starting the Game</source>
         <translation>Starte das Spiel</translation>
+    </message>
+    <message>
+        <location filename="qml/android-reversi/game.qml" line="874"/>
+        <source>Restart game</source>
+        <translation>Spiel neu starten</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="qml/android-reversi/main.qml" line="80"/>
-        <source>Quit</source>
-        <translation>Beenden</translation>
+        <location filename="qml/android-reversi/main.qml" line="71"/>
+        <source>Actions</source>
+        <translation>Aktionen</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/main.qml" line="80"/>
+        <location filename="qml/android-reversi/main.qml" line="72"/>
         <source>Back</source>
         <translation>Zurück</translation>
+    </message>
+    <message>
+        <location filename="qml/android-reversi/main.qml" line="77"/>
+        <source>Help</source>
+        <translation>Hilfe</translation>
+    </message>
+    <message>
+        <location filename="qml/android-reversi/main.qml" line="78"/>
+        <source>Rules</source>
+        <translation>Regeln</translation>
+    </message>
+    <message>
+        <location filename="qml/android-reversi/main.qml" line="79"/>
+        <source>About</source>
+        <translation>Über Reversi</translation>
     </message>
 </context>
 <context>
     <name>rules</name>
     <message>
-        <location filename="qml/android-reversi/rules.qml" line="55"/>
+        <location filename="qml/android-reversi/rules.qml" line="54"/>
         <source>Rules</source>
         <translation>Regeln</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/rules.qml" line="66"/>
+        <location filename="qml/android-reversi/rules.qml" line="64"/>
         <source>Both players take alternate turns. Black begins.
 
 The goal of the game is to capture enemy pieces, also commonly known as discs, which must be captured by trapping them between your own discs. This applies on the horizontal,vertical and diagonal axis of the playing field. Each player has to capture at least one enemy disc - if a player can&apos;t capture a disc, he has to pass.
@@ -91,7 +111,7 @@ Das Ziel des Spieles ist es am Ende mehr Steine als der Gegner zu haben. Man nim
 Das Spiel endet, wenn kein Spieler mehr einen Stein plazieren kann (es können noch freie Felder existieren). Der Spieler mit den meisten Steinen gewinnt.</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/rules.qml" line="75"/>
+        <location filename="qml/android-reversi/rules.qml" line="73"/>
         <source>New to &quot;Reversi&quot;? Try out the &quot;Tutorial&quot;, it will teach you some basic strategies.</source>
         <translation>Das &quot;Tutorial&quot; bringt einen Einblick in grundlegende Strategien. Probier es mal aus.</translation>
     </message>
@@ -99,32 +119,22 @@ Das Spiel endet, wenn kein Spieler mehr einen Stein plazieren kann (es können n
 <context>
     <name>start</name>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="59"/>
-        <source>About</source>
-        <translation>Über Reversi</translation>
-    </message>
-    <message>
-        <location filename="qml/android-reversi/start.qml" line="81"/>
-        <source>Rules</source>
-        <translation>Regeln</translation>
-    </message>
-    <message>
-        <location filename="qml/android-reversi/start.qml" line="103"/>
+        <location filename="qml/android-reversi/start.qml" line="195"/>
         <source>Start game</source>
         <translation>Starte das Spiel</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="136"/>
+        <location filename="qml/android-reversi/start.qml" line="70"/>
         <source>Player 1:</source>
         <translation>Spieler 1:</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="185"/>
+        <location filename="qml/android-reversi/start.qml" line="118"/>
         <source>Player 2:</source>
         <translation>Spieler 2:</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="227"/>
+        <location filename="qml/android-reversi/start.qml" line="159"/>
         <source>Language:</source>
         <translation>Sprache:</translation>
     </message>

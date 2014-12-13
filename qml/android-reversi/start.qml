@@ -176,9 +176,7 @@ Item {
                 delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
                     MouseArea { width: parent.width; height: parent.height; onClicked: {
                             uiconnection.changeLanguage(text)
-                            pageStack.pop()
-                            pageStack.push(Qt.resolvedUrl("start.qml"))
-                            variable.setQuit = true
+                            pageStack.push({item: Qt.resolvedUrl("start.qml"), replace:true})
                         }
                     }
                 }
