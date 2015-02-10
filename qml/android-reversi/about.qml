@@ -138,7 +138,7 @@ Contact: http://www.qt.io/licensing
 
 You may use, distribute and copy the Qt GUI Toolkit under the terms of GNU Lesser General Public License version 3, which supplements GNU General Public License Version 3.
 
-You should have received a copy of the license along with this Application."
+You should have received a copy of the license along with this application."
             }
         }
     }
