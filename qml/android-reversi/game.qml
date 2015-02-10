@@ -87,7 +87,7 @@ Item {
 
             property int currentPlayer: 0
 
-            property int sizeDisc: Screen.height < Screen.width ? Screen.height/12 : Screen.width/12
+            property int sizeDisc: Screen.height < Screen.width ? Screen.height/10 : Screen.width/10
 
             property int board00: 0
             property int board10: 0

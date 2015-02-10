@@ -54,7 +54,7 @@ Item {
                 width: parent.width
                 font.pixelSize: variable.heightText
                 font.bold: true
-                text: "Reversi Version 1.4"
+                text: "Reversi Version 1.4.1"
             }
 
             Text {
@@ -133,23 +133,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
                 color: "grey"
                 wrapMode: Text.Wrap
 
-                text: "Qt is a C++ toolkit for cross-platform application development.
+                text: "The Qt Toolkit is Copyright (C) 2014 Digia Plc and/or its subsidiary(-ies).
+Contact: http://www.qt.io/licensing
 
-Qt provides single-source portability across MS Windows, Mac OS X, Linux, and all major commercial Unix variants. Qt is also available for embedded devices as Qt for Embedded Linux and Qt for Windows CE.
+You may use, distribute and copy the Qt GUI Toolkit under the terms of GNU Lesser General Public License version 3, which supplements GNU General Public License Version 3.
 
-Qt is available under three different licensing options designed to accommodate the needs of our various users.
-
-Qt licensed under our commercial license agreement is appropriate for development of proprietary/commercial software where you do not want to share any source code with third parties or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU GPL version 3.0.
-
-Qt licensed under the GNU LGPL version 2.1 is appropriate for the development of Qt applications (proprietary or open source) provided you can comply with the terms and conditions of the GNU LGPL version 2.1.
-
-Qt licensed under the GNU General Public License version 3.0 is appropriate for the development of Qt applications where you wish to use such applications in combination with software subject to the terms of the GNU GPL version 3.0 or where you are otherwise willing to comply with the terms of the GNU GPL version 3.0.
-
-Please see qt.digia.com/product/licensing for an overview of Qt licensing.
-
-Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
-
-Qt is a Digia product. See qt.digia.com for more information."
+You should have received a copy of the license along with this Application."
             }
         }
     }
