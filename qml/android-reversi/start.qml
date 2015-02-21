@@ -90,6 +90,7 @@ Item {
                             ListElement { name: "Adaptive Tree AI"}
                             ListElement { name: "Control AI"}
                             ListElement { name: "Assembly AI"}
+                            ListElement { name: "Neural Network AI"}
                         }
 
                         delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
@@ -138,6 +139,7 @@ Item {
                             ListElement { name: "Adaptive Tree AI"}
                             ListElement { name: "Control AI"}
                             ListElement { name: "Assembly AI"}
+                            ListElement { name: "Neural Network AI"}
                         }
 
                         delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap

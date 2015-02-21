@@ -45,7 +45,8 @@ SOURCES += src/main.cpp \
     src/player/AssemblyAIPlayer/greedycore.cpp \
     src/player/AssemblyAIPlayer/insanecore.cpp \
     src/player/AssemblyAIPlayer/movementcore.cpp \
-    src/player/AssemblyAIPlayer/areacontrolcore.cpp
+    src/player/AssemblyAIPlayer/areacontrolcore.cpp \
+    src/player/neuralnetworkaiplayer.cpp
 
 # Installation path
 # target.path =
@@ -88,7 +89,8 @@ HEADERS += \
     src/player/AssemblyAIPlayer/frontierdiscscore.h \
     src/player/AssemblyAIPlayer/greedycore.h \
     src/player/AssemblyAIPlayer/insanecore.h \
-    src/player/AssemblyAIPlayer/movementcore.h
+    src/player/AssemblyAIPlayer/movementcore.h \
+    src/player/neuralnetworkaiplayer.h
 
 OTHER_FILES += \
     src/translation/reversi-core_de.ts \
@@ -116,7 +118,8 @@ OTHER_FILES += \
 RESOURCES += \
     src/translation/core-translation.qrc \
     translation-ui.qrc \
-    qml.qrc
+    qml.qrc \
+    src/player/NeuralNetworkAIPlayer/NNData.qrc
 
 SUBDIRS += \
     android-reversi-ui.pro \
@@ -125,3 +128,8 @@ SUBDIRS += \
 QMAKE_CXXFLAGS += -std=gnu++11
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+
+DISTFILES += \
+    src/player/NeuralNetworkAIPlayer/hidden1ToHidden2.txt \
+    src/player/NeuralNetworkAIPlayer/hidden2ToOutput.txt \
+    src/player/NeuralNetworkAIPlayer/inputToHidden1.txt
