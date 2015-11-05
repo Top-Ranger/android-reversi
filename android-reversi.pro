@@ -1,5 +1,13 @@
+TEMPLATE = app
+
+QT += qml quick
+CONFIG += c++11
+
 # Additional import path used to resolve QML modules in Creator's code model
 QML_IMPORT_PATH =
+
+# Default rules for deployment.
+include(deployment.pri)
 
 release {
     DEFINES += QT_NO_DEBUG_OUTPUT
@@ -45,10 +53,6 @@ SOURCES += src/main.cpp \
 
 # Installation path
 # target.path =
-
-# Please do not modify the following two lines. Required for deployment.
-include(qtquick2applicationviewer/qtquick2applicationviewer.pri)
-qtcAddDeployment()
 
 HEADERS += \
     src/core/gameboard.h \
@@ -116,15 +120,4 @@ RESOURCES += \
     qml.qrc \
     src/player/NeuralNetworkAIPlayer/NNData.qrc
 
-SUBDIRS += \
-    android-reversi-ui.pro \
-    src/translation/reversi-core.pro
-
-QMAKE_CXXFLAGS += -std=gnu++11
-
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
-
-DISTFILES += \
-    src/player/NeuralNetworkAIPlayer/hidden1ToHidden2.txt \
-    src/player/NeuralNetworkAIPlayer/hidden2ToOutput.txt \
-    src/player/NeuralNetworkAIPlayer/inputToHidden1.txt
