@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2015 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -68,15 +68,15 @@ ApplicationWindow {
 
         Menu {
             visible: pageStack.depth > 1
-            title: qsTr("Actions")
-            MenuItem { text: qsTr("Back"); visible: pageStack.depth > 1; onTriggered: pageStack.pop() }
+            title: qsTr("Actions") + uiconnection.retranslate_append
+            MenuItem { text: qsTr("Back") + uiconnection.retranslate_append; visible: pageStack.depth > 1; onTriggered: pageStack.pop() }
         }
 
         Menu {
             id: helpMenu
-            title: qsTr("Help")
-            MenuItem { text: qsTr("Rules"); onTriggered: pageStack.push(Qt.resolvedUrl("rules.qml")) }
-            MenuItem { text: qsTr("About"); onTriggered: pageStack.push(Qt.resolvedUrl("about.qml")) }
+            title: qsTr("Help") + uiconnection.retranslate_append
+            MenuItem { text: qsTr("Rules") + uiconnection.retranslate_append; onTriggered: pageStack.push(Qt.resolvedUrl("rules.qml")) }
+            MenuItem { text: qsTr("About") + uiconnection.retranslate_append; onTriggered: pageStack.push(Qt.resolvedUrl("about.qml")) }
         }
 
     }

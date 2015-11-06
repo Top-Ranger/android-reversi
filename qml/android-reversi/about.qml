@@ -80,7 +80,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
             Text {
                 font.pixelSize: variable.heightText
                 font.underline: true
-                text: qsTr("Translation")
+                text: qsTr("Translation") + uiconnection.retranslate_append
             }
 
             Text {
@@ -124,7 +124,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
             Text {
                 font.pixelSize: variable.heightText
                 font.underline: true
-                text: qsTr("About Qt")
+                text: qsTr("About Qt") + uiconnection.retranslate_append
             }
 
             Text {

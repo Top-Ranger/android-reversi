@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2015 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    QQmlApplicationEngine viewer(QUrl("qrc:///qml/android-reversi/main.qml"));
+    QQmlApplicationEngine viewer;
 
     QTranslator *translator = new QTranslator();
     QTranslator *coreTranslator = new QTranslator();
@@ -56,6 +56,8 @@ int main(int argc, char *argv[])
     UIConnection connection(translator, coreTranslator);
 
     viewer.rootContext()->setContextProperty("uiconnection", &connection);
+
+    viewer.load(QUrl("qrc:///qml/android-reversi/main.qml"));
 
     QQuickWindow *window = qobject_cast<QQuickWindow *>(viewer.rootObjects().first());
     window->showFullScreen();

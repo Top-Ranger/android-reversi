@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2015 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -30,6 +30,11 @@
 #include "uiconnection.h"
 #include <QDebug>
 
+QString UIConnection::getRetranslateAppend()
+{
+    return QString("");
+}
+
 UIConnection::UIConnection(QTranslator *translator, QTranslator *coreTranslator, QObject *parent) :
     QObject(parent),
     _translator(translator),
@@ -43,6 +48,7 @@ void UIConnection::changeLanguage(QString language)
     {
         _translator->load((QString(":translation/android-reversi-ui_%1").arg(language)));
         _coreTranslator->load(QString(":translation/reversi-core_%1").arg(language));
+        emit retranslate();
     }
     else
     {

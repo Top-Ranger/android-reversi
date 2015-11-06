@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2015 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -36,8 +36,13 @@
 class UIConnection : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString retranslate_append READ getRetranslateAppend NOTIFY retranslate)
 public:
+    static QString getRetranslateAppend();
     explicit UIConnection(QTranslator *translator, QTranslator *coreTranslator, QObject *parent = 0);
+
+signals:
+    void retranslate();
 
 public slots:
     Q_INVOKABLE void changeLanguage(QString language);

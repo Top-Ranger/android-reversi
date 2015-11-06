@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2015 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -67,7 +67,7 @@ Item {
                             font.pixelSize: variable.heightText
                             font.underline: true
                             font.bold: true
-                            text: qsTr("Player 1:")
+                            text: qsTr("Player 1:") + uiconnection.retranslate_append
                         }
                     }
 
@@ -116,7 +116,7 @@ Item {
                             font.pixelSize: variable.heightText
                             font.underline: true
                             font.bold: true
-                            text: qsTr("Player 2:")
+                            text: qsTr("Player 2:") + uiconnection.retranslate_append
                         }
                     }
 
@@ -158,7 +158,7 @@ Item {
                 font.bold: true
                 x: Screen.width / 2 - (width / 2)
                 wrapMode: Text.Wrap
-                text: qsTr("Language:")
+                text: qsTr("Language:") + uiconnection.retranslate_append
             }
 
             ListView {
@@ -178,7 +178,6 @@ Item {
                 delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
                     MouseArea { width: parent.width; height: parent.height; onClicked: {
                             uiconnection.changeLanguage(text)
-                            pageStack.push({item: Qt.resolvedUrl("start.qml"), replace:true})
                         }
                     }
                 }
@@ -186,7 +185,7 @@ Item {
 
             Button {
                 width: parent.width
-                text: qsTr("Start game")
+                text: qsTr("Start game") + uiconnection.retranslate_append
                 onClicked: {
                     variable.player1 = list1.currentItem.text
                     variable.player2 = list2.currentItem.text

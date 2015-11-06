@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2015 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -51,7 +51,7 @@ Item {
 
             Text {
                 font.pixelSize: variable.heightText
-                text: qsTr("Rules")
+                text: qsTr("Rules") + uiconnection.retranslate_append
                 font.bold: true
                 font.underline: true
             }
@@ -65,7 +65,7 @@ Item {
 
 The goal of the game is to capture enemy pieces, also commonly known as discs, which must be captured by trapping them between your own discs. This applies on the horizontal,vertical and diagonal axis of the playing field. Each player has to capture at least one enemy disc - if a player can't capture a disc, he has to pass.
 
-The game ends when both players are unable to capture. (However, there can still be free places on the board). The player with most discs wins.")
+The game ends when both players are unable to capture. (However, there can still be free places on the board). The player with most discs wins.") + uiconnection.retranslate_append
             }
 
             Text  {
@@ -74,7 +74,7 @@ The game ends when both players are unable to capture. (However, there can still
                 width: rules.width
                 wrapMode: Text.Wrap
 
-                text: qsTr("New to \"Reversi\"? Try out the \"Tutorial\", it will teach you some basic strategies.")
+                text: qsTr("New to \"Reversi\"? Try out the \"Tutorial\", it will teach you some basic strategies.") + uiconnection.retranslate_append
             }
         }
     }

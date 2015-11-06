@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2015 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -74,7 +74,7 @@ Item {
 
         Item {
             id: variableBoard
-            property string input: qsTr("Waiting...")
+            property string input: qsTr("Waiting...") + uiconnection.retranslate_append
             property string message: ""
             property bool gamestarted: false
             property bool gamefinished: false
@@ -171,15 +171,15 @@ Item {
                 if(!variableBoard.gamefinished)
                 {
                     variableBoard.currentPlayer = player
-                    variableBoard.input = qsTr("Player ") + player + qsTr(" do your turn")
+                    variableBoard.input = qsTr("Player ") + player + qsTr(" do your turn") + uiconnection.retranslate_append
                 }
             }
 
             function endOfGame(score1, score2)
             {
                 variableBoard.gamefinished = true
-                variableBoard.input = qsTr("Finished!")
-                variableBoard.message = qsTr("END OF GAME!\nPoints Player 1: ") + score1 + "\n" + qsTr("Points Player 2: ") + score2
+                variableBoard.input = qsTr("Finished!") + uiconnection.retranslate_append
+                variableBoard.message = qsTr("END OF GAME!\nPoints Player 1: ") + score1 + "\n" + qsTr("Points Player 2: ") + score2 + uiconnection.retranslate_append
             }
 
             function getMessage(newmessage)
@@ -195,7 +195,7 @@ Item {
                 if(!variableBoard.gamefinished)
                 {
                     variableBoard.currentPlayer = 0
-                    variableBoard.input = qsTr("Waiting...")
+                    variableBoard.input = qsTr("Waiting...") + uiconnection.retranslate_append
                 }
                 gamemaster.getInput(x,y)
             }
@@ -301,7 +301,7 @@ Item {
 
             Text {
                 width: parent.width
-                text: qsTr("Starting the Game")
+                text: qsTr("Starting the Game") + uiconnection.retranslate_append
                 wrapMode: Text.Wrap
                 visible: !variableBoard.gamestarted
                 font.pixelSize: variable.heightText
@@ -871,7 +871,7 @@ Item {
             Button {
                 width: parent.width
                 visible: variableBoard.gamefinished
-                text: qsTr("Restart game")
+                text: qsTr("Restart game") + uiconnection.retranslate_append
                 onClicked: {
                     gamemaster.initialise(variable.player1, variable.player2, 0)
                     pageStack.push({item: Qt.resolvedUrl("game.qml"), replace:true})
