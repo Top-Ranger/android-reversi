@@ -119,7 +119,7 @@ The game ends when both players are unable to capture. (However, there can still
 <context>
     <name>start</name>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="189"/>
+        <location filename="qml/android-reversi/start.qml" line="190"/>
         <source>Start game</source>
         <translation>Start game</translation>
     </message>
@@ -129,12 +129,12 @@ The game ends when both players are unable to capture. (However, there can still
         <translation>Player 1:</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="119"/>
+        <location filename="qml/android-reversi/start.qml" line="120"/>
         <source>Player 2:</source>
         <translation>Player 2:</translation>
     </message>
     <message>
-        <location filename="qml/android-reversi/start.qml" line="161"/>
+        <location filename="qml/android-reversi/start.qml" line="163"/>
         <source>Language:</source>
         <translation>Language:</translation>
     </message>

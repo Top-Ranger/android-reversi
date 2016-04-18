@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014,2015 Marcus Soll
+  Copyright (C) 2014,2015,2016 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -91,6 +91,7 @@ Item {
                             ListElement { name: "Control AI"}
                             ListElement { name: "Assembly AI"}
                             ListElement { name: "Neural Network AI"}
+                            ListElement { name: "Monte Carlo AI"}
                         }
 
                         delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap
@@ -140,6 +141,7 @@ Item {
                             ListElement { name: "Control AI"}
                             ListElement { name: "Assembly AI"}
                             ListElement { name: "Neural Network AI"}
+                            ListElement { name: "Monte Carlo AI"}
                         }
 
                         delegate: Text { width: parent.width; font.pixelSize: variable.heightText; text: name; wrapMode: Text.Wrap

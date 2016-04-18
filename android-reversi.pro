@@ -49,7 +49,8 @@ SOURCES += src/main.cpp \
     src/player/AssemblyAIPlayer/insanecore.cpp \
     src/player/AssemblyAIPlayer/movementcore.cpp \
     src/player/AssemblyAIPlayer/areacontrolcore.cpp \
-    src/player/neuralnetworkaiplayer.cpp
+    src/player/neuralnetworkaiplayer.cpp \
+    src/player/montecarloplayer.cpp
 
 # Installation path
 # target.path =
@@ -89,7 +90,10 @@ HEADERS += \
     src/player/AssemblyAIPlayer/greedycore.h \
     src/player/AssemblyAIPlayer/insanecore.h \
     src/player/AssemblyAIPlayer/movementcore.h \
-    src/player/neuralnetworkaiplayer.h
+    src/player/neuralnetworkaiplayer.h \
+    src/core/commons.h \
+    src/core/randomhelper.h \
+    src/player/montecarloplayer.h
 
 OTHER_FILES += \
     src/translation/reversi-core_de.ts \

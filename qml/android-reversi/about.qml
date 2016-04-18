@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014,2015 Marcus Soll
+  Copyright (C) 2014,2015,2016 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -54,7 +54,7 @@ Item {
                 width: parent.width
                 font.pixelSize: variable.heightText
                 font.bold: true
-                text: "Reversi Version 1.5.2"
+                text: "Reversi Version 1.7"
             }
 
             Text {
@@ -63,7 +63,7 @@ Item {
                 color: "grey"
                 wrapMode: Text.Wrap
 
-                text: "  Copyright (C) 2014,2015 Marcus Soll
+                text: "  Copyright (C) 2014,2015,2016 Marcus Soll
   Copyright (C) 2014 Johannes Preuß
   All rights reserved.
 
