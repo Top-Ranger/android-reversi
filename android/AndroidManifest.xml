@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<manifest android:versionCode="1" android:installLocation="auto" android:versionName="1.5.2" package="org.qtproject.android_reversi" xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest android:versionCode="1" android:installLocation="auto" android:versionName="1.7" package="org.qtproject.android_reversi" xmlns:android="http://schemas.android.com/apk/res/android">
     <application android:label="Reversi" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:hardwareAccelerated="true" android:icon="@drawable/icon">
         <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|locale|fontScale|keyboard|keyboardHidden|navigation" android:label="Reversi" android:screenOrientation="unspecified" android:name="org.qtproject.qt5.android.bindings.QtActivity">
             <intent-filter>
